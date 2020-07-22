@@ -54,6 +54,9 @@ debug.hwui.renderer=skiavk
 # IO Prefetcher
 vendor.iop.enable_uxe=0
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Media
 av.offload.enable=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
