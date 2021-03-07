@@ -5835,6 +5835,9 @@ case "$console_config" in
         ;;
 esac
 
+# Enable dt2w
+echo 1 > /sys/android_touch/doubletap2wake
+
 # Parse misc partition path and set property
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
 real_path=${misc_link##*>}
