@@ -202,6 +202,10 @@ on boot
     restorecon /sys/kernel/debug/regmap/0-0042/registers
     restorecon /sys/kernel/debug/regmap/tavil-slim-pgd/registers
 
+    # Kernelspace battery saver
+    chown system system /sys/module/battery_saver/parameters/enabled
+    chmod 0660 /sys/module/battery_saver/parameters/enabled
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
